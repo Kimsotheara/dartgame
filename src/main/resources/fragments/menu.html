@@ -1,0 +1,173 @@
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4" xmlns:th="http://www.thymeleaf.org">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+        <span class="brand-text font-weight-light">GM </span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-4">
+            <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item has-treeview" th:classappend="${mQROpen}">
+
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-solid fa-qrcode"></i>
+                        <p>
+                            Generate QR
+                            <i class="fas fa-angle-right right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item access-create-setup">
+                            <a href="/generate" class="nav-link" th:classappend="${mQRGActive}">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>Generate</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/generate/list" class="nav-link" th:classappend="${mQRGLActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview" th:classappend="${mUserOpen}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            User
+                            <i class="fas fa-angle-right right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item access-create-setup">
+                            <a href="/users/add" class="nav-link" th:classappend="${mUCActive}">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/users" class="nav-link" th:classappend="${mULActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview" th:classappend="${mBranchOpen}">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-light fa-warehouse"></i>
+                        <p>
+                            Branch
+                            <i class="fas fa-angle-right right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item access-create-setup">
+                            <a href="/branches/add" class="nav-link" th:classappend="${mBranchCActive}">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/branches" class="nav-link" th:classappend="${mBranchLActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview" th:classappend="${mDepartOpen}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>
+                            Department
+                            <i class="fas fa-angle-right right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item access-create-setup">
+                            <a href="/departments/add" class="nav-link" th:classappend="${mDepartCActive}">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/departments" class="nav-link" th:classappend="${mDepartLActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview" th:classappend="${mStaffOpen}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>
+                            Staff
+                            <i class="fas fa-angle-right right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item access-create-setup">
+                            <a href="/staffs/add" class="nav-link" th:classappend="${mStaffCActive}">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/staffs" class="nav-link" th:classappend="${mStaffLActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item has-treeview" th:classappend="${mStaffAttOpen}">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>
+                            Staff Attendance
+                            <i class="fas fa-angle-right right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item access-create-setup">
+                            <a href="/staff-attendance/add" class="nav-link" th:classappend="${mStaffAttCActive}">
+                                <i class="nav-icon fas fa-plus-square"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/staff-attendance" class="nav-link" th:classappend="${mStaffAttLActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/staff-attendance/staff-attendance-daily-report" class="nav-link" th:classappend="${mStaffAttRLActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>Daily Report</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/staff-attendance/staff-attendance-report" class="nav-link" th:classappend="${mSattReportLActive}">
+                                <i class="nav-icon fas fa-list-ul"></i>
+                                <p>Attendance Report</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>
